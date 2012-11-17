@@ -2,16 +2,23 @@ doctype html
 html
   head
     title CodrPress
+    link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"
+    link rel="stylesheet" type="text/css" href="/css/codrpress.css"
+    link rel="stylesheet" type="text/css" href="/css/responsive.css"
+    link rel="stylesheet" type="text/css" href="/css/radiant-dark.css"
   body
-    h1 Markup examples
-
-    #content
-      p This example shows you how a basic Slim file looks like.
-
-    - if @posts.any?
-      - for post in @posts do
-        h2 = post.title
-
-    - else
-      p No items found Please add some inventory.
-        Thank you!
+    div.container
+      header
+        a href="/" CodrPress
+      div.row
+        div.span7
+          - if @posts.any?
+            section.articles
+              - for post in @posts do
+                article
+                  h1
+                    a href="#{post.url}" = post.title
+                  div.content == post.body_html
+          - else
+            p No items found Please add some inventory.
+              Thank you!
