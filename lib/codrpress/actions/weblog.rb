@@ -5,8 +5,8 @@ module Codrpress
 
             included do
                 get "/" do
-                    @posts = Post.latest
-                    haml :index
+                    @posts = Post.latest.limit(10)
+                    slim :index
                 end
             end
         end

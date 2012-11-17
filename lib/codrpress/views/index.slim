@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title CodrPress
+  body
+    h1 Markup examples
+
+    #content
+      p This example shows you how a basic Slim file looks like.
+
+    - if @posts.any?
+      - for post in @posts do
+        h2 = post.title
+
+    - else
+      p No items found Please add some inventory.
+        Thank you!

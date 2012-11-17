@@ -1,6 +1,6 @@
 require 'mongoid'
 
-require 'haml'
+require 'slim'
 
 require 'active_support/concern'
 
