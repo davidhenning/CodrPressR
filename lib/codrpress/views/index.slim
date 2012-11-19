@@ -11,3 +11,9 @@
               a href="/tag/#{tag}"
                 span.label = tag
         div.content == post.body_html
+  - unless @pagination.nil?
+    ul.pager
+      li.previous *{:class => [(@pagination[:prevPageUrl].nil? ? "disabled" : nil)]}
+        a href="#{@pagination[:prevPageUrl]}" &larr; Zurück
+      li.next *{:class => [(@pagination[:nextPageUrl].nil? ? "disabled" : nil)]}
+        a href="#{@pagination[:nextPageUrl]}" Vor &rarr;
