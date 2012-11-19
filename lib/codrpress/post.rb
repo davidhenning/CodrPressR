@@ -8,6 +8,7 @@ module Codrpress
         field :body,  :type => String
         field :body_html, :type => String
         field :slugs, :type => Array, :default => []
+        field :tags, :type => Array, :default => []
 
         scope :published, where(:status => :published)
         scope :posts, where(:published_at.ne => nil)

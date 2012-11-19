@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title
+    link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"
+    link rel="stylesheet" type="text/css" href="/css/codrpress.css"
+    link rel="stylesheet" type="text/css" href="/css/responsive.css"
+    link rel="stylesheet" type="text/css" href="/css/radiant-dark.css"
+  body
+    div.container
+      header
+        a href="/" CodrPress
+      div.row
+        div.span7
+          == yield
+        div class="span3 offset2"
+      footer
+        a href="https://github.com/MadCatme/CodrPress" powered by CodrPress
