@@ -4,7 +4,7 @@ module Codrpress
             extend ActiveSupport::Concern
 
             included do
-                get '/tag/:tag?' do |tag|
+                get '/tag/:tag' do |tag|
                     @posts = Post.where(:tags => tag)
 
                     slim :index

@@ -19,8 +19,6 @@ module Codrpress
                         for_day(year.to_i, month.to_i, day.to_i).
                         where(:slugs => slug).limit(1)
 
-                    puts @posts
-
                     slim :index
                 end
 
