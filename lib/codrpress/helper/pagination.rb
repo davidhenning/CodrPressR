@@ -15,7 +15,7 @@ module Codrpress
                     end
                 end
 
-                return pages
+                pages
             end
         end
     end
